@@ -1,0 +1,9 @@
+.main {
+    min-height: 80vh;
+  }
+
+  .admin-form {
+    width: 400px;
+    margin: auto;
+    margin-top: 3rem;
+  }
