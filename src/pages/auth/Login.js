@@ -5,6 +5,7 @@ import CustomInput from '../../components/customInput/CustomInput';
 import { toast } from 'react-toastify';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../config/firebase-config';
+import { useNavigate } from 'react-router-dom';
 
 const inputs = [
     {
@@ -26,6 +27,7 @@ const inputs = [
 function Login() {
 
     const [formData, setFormData] =useState({});
+    const navigate = useNavigate();
     
     const handleOnChange =(e) => {
         const {name, value} = e.target;
@@ -43,13 +45,13 @@ function Login() {
       });
       const { user } = await signInPromise;
       toast.success("Login in Successful");
-      // pull the user info from DB
 
       }
       catch{
         toast.error(`Something went wrong ${e.message}`);
 
       }
+      navigate("/dashboard");
     };
 
 
