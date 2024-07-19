@@ -10,22 +10,13 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          {/* {userInfo?.uid ? (
-            <>
-              <Link to="/dashboard" className="nav-link">
-                Dashboard
-              </Link>
-              <Link to="/#" onClick={handleLogout} className="nav-link">
-                Sign Out
-              </Link>
-            </>
-          ) : (
-            <> */}
+         
               <Link to="/login" className="nav-link">
                 Login
               </Link>
-            {/* </>
-          )} */}
+              <Link to="/sign-up" className="nav-link">
+                  Sign Up
+                </Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
